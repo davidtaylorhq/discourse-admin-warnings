@@ -1,6 +1,5 @@
 <script type="text/discourse-plugin" version="0.1">
-    const TopicsController = require("discourse/controllers/topic").default;
-    TopicsController.reopen({
+    api.modifyClass('controller:topic', {
        actions:{
            replyToPost(post, skipWarning = false) {
                 if((this.get('model.closed') || this.get('model.archived')) && !skipWarning){
