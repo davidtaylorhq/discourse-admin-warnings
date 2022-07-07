@@ -1,6 +1,6 @@
 <script type="text/discourse-plugin" version="0.1">
     api.modifyClass('controller:topic', {
-       pluginId: 'md-composer-extras',
+       pluginId: 'discourse-admin-warnings',
        actions:{
            replyToPost(post, skipWarning = false) {
                 if((this.get('model.closed') || this.get('model.archived')) && !skipWarning){
